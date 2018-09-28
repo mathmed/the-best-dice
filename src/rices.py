@@ -1,10 +1,10 @@
 
 import random
 
-class Rices:
+class Dice:
     def __init__(self):
         print("\n\n****************************************************")
-        print("************** WELCOME TO BEST RICE ****************")
+        print("************** WELCOME TO BEST DICE ****************")
         print("****************************************************\n\n")
 
         self.main()
@@ -54,13 +54,32 @@ class Rices:
         print("\n\nresults sum\n")
         cont = 0
         for i in array_sum:
-            print("result = "+str(cont)+": "+str(round((i/1000000)*10,2))+"%")
+            print("result = "+str(cont)+": "+str(round((i/1000000)*100,2))+"%")
             cont+=1
 
         print("\n\nresults mult\n")
         cont = 0
         for i in array_mult:
-            print("result = "+str(cont)+": "+str(round((i/1000000)*10,2))+"%")
+            print("result = "+str(cont)+": "+str(round((i/1000000)*100,2))+"%")
             cont+=1
 
-c = Rices()
+        faces = int(len(array_mult)/2)
+        cont_mult = 0
+        for i in range (faces, len(array_mult)):
+            cont_mult+=round((array_mult[i]/1000000)*100,2)
+        cont_sum = 0
+        for i in range(faces, len(array_sum)):
+            cont_sum+=round((array_sum[i]/1000000)*100,2)
+
+
+        print("\nchance to take a number above "+str(faces)+" with added dice: "+str(cont_sum)+"%\n")
+        print("chance to take a number above "+str(faces)+" with dice multiplied by 2: "+str(cont_mult)+"%")
+
+        if(cont_sum > cont_mult):
+            print("\nthe best choice is to play dices added\n")
+        elif(cont_mult > cont_sum):
+            print("\nthe best choice is to play dice multiplied by 2\n")
+        else:
+            print("\nthe choice does not matter\n")
+
+c = Dice()
