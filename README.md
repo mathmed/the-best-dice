@@ -20,3 +20,4 @@ and report the amount of dice played and its value
 
 ## Licence
 This is free software, modify it as you wish
+

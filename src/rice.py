@@ -72,8 +72,10 @@ class Dice:
             cont_sum+=round((array_sum[i]/1000000)*100,2)
 
 
-        print("\nchance to take a number above "+str(faces)+" with added dice: "+str(cont_sum)+"%\n")
-        print("chance to take a number above "+str(faces)+" with dice multiplied by 2: "+str(cont_mult)+"%")
+        print("\nchance to take a number above "+str(faces)+" with added dice: "+str(round(cont_sum,2))+"%")
+        print("\nchance to take a number below "+str(faces)+" with added dice: "+str(round(100-cont_sum, 2))+"%\n")
+        print("\nchance to take a number above "+str(faces)+" with dice multiplied by 2: "+str(round(cont_mult,2))+"%")
+        print("\nchance to take a number below "+str(faces)+" with dice multiplied by 2: "+str(round(100-cont_mult,2))+"%")
 
         if(cont_sum > cont_mult):
             print("\nthe best choice is to play dices added\n")
