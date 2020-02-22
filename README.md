@@ -1,4 +1,4 @@
-# the-best-dice
+# The best DICE
 
 ## What's the best choice with dice?
 This is a simple script to show the best option in a game of dice, add the resulting faces or multiply them by 2
